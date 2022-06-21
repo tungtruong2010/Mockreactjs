@@ -1,4 +1,8 @@
-.textField{
+.textField {
     width: 500px;
     margin-bottom: 15px;
+}
+
+.borderNone {
+    border-bottom: unset;
 }

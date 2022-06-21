@@ -48,7 +48,7 @@ export default function MainTable() {
           Add new user
         </Button>
       </Toolbar>
-    <TableContainer component={Paper} style={{padding:50}}>
+    <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
@@ -68,18 +68,18 @@ export default function MainTable() {
               key={data.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
+              <TableCell component="th" scope="row" style={{borderBottom: "unset"}}>
                 {data.id}
               </TableCell>
-              <TableCell component="th" scope="row">
+              <TableCell component="th" scope="row" style={{borderBottom: "unset"}}>
                 {data.name}
               </TableCell>
-              <TableCell align="center">{data.description}</TableCell>
-              <TableCell align="center">{data.language}</TableCell>
-              <TableCell align="center">{data.watchers_count}</TableCell>
-              <TableCell align="center">{data.open_issues}</TableCell>
-              <TableCell align="center">{data.private.toString()}</TableCell>
-              <TableCell align="center" style={{display:"flex", marginRight:"2"}}>
+              <TableCell align="center" style={{borderBottom: "unset"}}>{data.description}</TableCell>
+              <TableCell align="center" style={{borderBottom: "unset"}}>{data.language}</TableCell>
+              <TableCell align="center" style={{borderBottom: "unset"}}>{data.watchers_count}</TableCell>
+              <TableCell align="center" style={{borderBottom: "unset"}}>{data.open_issues}</TableCell>
+              <TableCell align="center" style={{borderBottom: "unset"}}>{data.private.toString()}</TableCell>
+              <TableCell align="center" style={{display:"flex", marginRight:"2", borderBottom:"unset"}}>
                 <Button onClick={() => {handleClickOpenEdit(data.id)}} variant="contained" color="warning" style={{marginRight:25}}>
                 <EditIcon />
                 </Button>
