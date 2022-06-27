@@ -41,8 +41,7 @@ export default function MainTable() {
     setOpenAdd(true);
   }
   return (
-    
-    <Container maxWidth="xl">
+       <Container maxWidth="xl">
       <Toolbar style={{paddingLeft: 0}}>
         <Button onClick={handleClickOpenAdd} variant="contained" color="primary" >
           Add new user
@@ -72,7 +71,7 @@ export default function MainTable() {
                 {data.id}
               </TableCell>
               <TableCell component="th" scope="row" style={{borderBottom: "unset"}}>
-                {data.name}
+                {data?.name}
               </TableCell>
               <TableCell align="center" style={{borderBottom: "unset"}}>{data.description}</TableCell>
               <TableCell align="center" style={{borderBottom: "unset"}}>{data.language}</TableCell>
@@ -99,5 +98,6 @@ export default function MainTable() {
     <FormEdit open={open} setOpens={setOpen}></FormEdit>  
     <FormAdd open={openAdd} setOpens={setOpenAdd}></FormAdd>
     </Container>
+   
   );
 }

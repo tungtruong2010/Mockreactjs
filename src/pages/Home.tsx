@@ -3,8 +3,12 @@ import Header from "../components/Header";
 import MainTable from "../components/Table";
 
 export default function Home(){
-    return (<Container maxWidth="xl">
-        <Header/>
-        <MainTable/>
-        </Container>)
+    return (
+        <Container maxWidth="xl">
+            <Header/>
+            <div className="tableTest">
+                <MainTable/>
+            </div>
+        </Container>
+    )
 }

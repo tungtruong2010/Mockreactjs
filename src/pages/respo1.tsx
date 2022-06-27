@@ -7,9 +7,10 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { Provider, useDispatch, useSelector } from "react-redux";
 import Header from "../components/Header";
 import { deleteUser, getAUser, getUserThunk } from "../redux/action/userAction";
+import store from "../redux/store";
 export default function Respo1(){
     const dispatch = useDispatch();
   const userList = useSelector((state:any) => state.User.userList);
@@ -36,9 +37,9 @@ export default function Respo1(){
     setOpenAdd(true);
   }
 return (
+  
     <Container maxWidth="xl">
         <Header/>
-
         <Container maxWidth="xl">
             <Toolbar style={{paddingLeft: 0}}>
                 <Button onClick={handleClickOpenAdd} variant="contained" color="primary" >
@@ -81,5 +82,6 @@ return (
         </Table>
         </TableContainer>
         </Container>
-    </Container>)
+    </Container>
+    )
 }

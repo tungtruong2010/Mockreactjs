@@ -21,7 +21,7 @@ export default function FormEdit({open, setOpens}:Iprops) {
   //   onFormChange(name, value);
   // };
 
-  let navigate = useNavigate();
+  //let navigate = useNavigate();
 
   useEffect(()=>{
     

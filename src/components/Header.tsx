@@ -1,7 +1,6 @@
 import { Box, Button, FormControl, InputLabel, MenuItem, Select, TextField, Toolbar, Typography } from "@mui/material";
 import { Link, Route, useNavigate, BrowserRouter} from "react-router-dom";
 export default function Header(){
-  let navigate = useNavigate();
 
     return (
     <Box sx={{ flexGrow: 1 }}>
